@@ -1,0 +1,223 @@
+/* Estilos gerais para o corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: linear-gradient(135deg, #FF7000, #FF7000); /* Adiciona um gradiente de fundo */
+
+}
+
+/* Estilo para o formulário */
+form {
+    margin-bottom: 20px;
+}
+
+/* Estilo para os rótulos (labels) do formulário */
+label {
+    display: block; /* Faz com que cada rótulo ocupe uma linha inteira */
+    margin-top: 5px; /* Espaçamento superior */
+}
+
+/* Estilo para a lista de passageiros */
+#passenger-list, #print-passenger-list {
+    list-style-type: none; /* Remove marcadores de lista */
+    padding: 0; /* Remove padding */
+    color: white;
+}
+
+/* Estilo para cada item da lista de passageiros */
+#passenger-list li, #print-passenger-list li {
+    margin-top: 5px; /* Espaçamento superior */
+    display: flex; /* Utiliza flexbox para alinhar itens */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+/* Estilo para a lista de passageiros */
+#passenger-list, #print-passenger-list {
+    list-style-type: none; /* Remove marcadores de lista */
+    padding: 0; /* Remove padding */
+    color: white;
+}
+
+/* Estilo para cada item da lista de passageiros */
+#passenger-list li, #print-passenger-list li {
+    margin-top: 5px; /* Espaçamento superior */
+    display: flex; /* Utiliza flexbox para alinhar itens */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+
+/* Estilo para a lista de passageiros */
+#passenger-list, #print-passenger-list {
+    list-style-type: none; /* Remove marcadores de lista */
+    padding: 0; /* Remove padding */
+    color: white;
+}
+
+/* Estilo para cada item da lista de passageiros */
+#passenger-list li, #print-passenger-list li {
+    margin-top: 5px; /* Espaçamento superior */
+    display: flex; /* Utiliza flexbox para alinhar itens */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+/* Estilo para o botão de exclusão */
+.delete-passenger {
+    background-color: #FF0000; /* Cor vermelha para o botão de exclusão */
+    color: white;
+    border: none;
+    padding: 5px; /* Espaçamento interno menor */
+    cursor: pointer;
+    margin-left: 10px; /* Espaço à esquerda do botão de exclusão */
+    flex-shrink: 0; /* Impede que o botão de exclusão encolha */
+}
+
+/* Estilos para o texto do nome do passageiro */
+.passenger-name {
+    margin-left: 10px; /* Espaço à esquerda do nome do passageiro */
+}
+
+/* Estilos para tornar o design responsivo em telas pequenas */
+@media (max-width: 600px) {
+    body {
+        margin: 10px; /* Margem menor */
+    }
+    
+    h1, h2 {
+        font-size: 1.2em; /* Tamanho de fonte menor para títulos */
+    }
+
+    label {
+        margin-top: 5px; /* Menor espaçamento superior */
+    }
+
+    input, button {
+        width: 100%; /* Campos e botões ocupam toda a largura disponível */
+        margin-top: 3px; /* Menor espaçamento superior */
+    }
+
+    button {
+        margin-bottom: 10px; /* Espaçamento inferior para botões */
+    }
+
+    form {
+        display: flex; /* Flexbox para formulário */
+        flex-direction: column; /* Coloca elementos em coluna */
+    }
+
+    #trip-details, #print-trip-details {
+        font-size: 0.9em; /* Tamanho de fonte menor para detalhes da viagem */
+    }
+
+    .passenger-name {
+        margin-left: 0; /* Remove o espaço à esquerda do nome do passageiro em telas pequenas */
+    }
+}
+
+
+
+/* Estilo para os campos de entrada e botões */
+input {
+    margin-top: 5px; /* Espaçamento superior */
+    display: block; /* Cada elemento ocupa uma linha inteira */
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none; 
+    background-color: transparent;
+}
+
+button{
+
+    font-weight: bold;
+}
+button:hover{
+
+    background-color: #FF7000;
+    color: white;
+}
+
+/* Estilo para as listas de passageiros */
+#passenger-list, #print-passenger-list {
+    list-style-type:decimal; /* Remove marcadores de lista */
+    padding: 5; /* Remove padding */
+    color: white;
+}
+
+/* Estilo para os detalhes da viagem */
+#trip-details {
+    white-space: pre-wrap; /* Mantém quebras de linha e espaços */
+    background-color: #fdfcfc; /* Cor de fundo */
+    padding: 10px; /* Padding interno */
+    border: 1px solid #ddd; /* Borda */
+    font-size: 1.3em;
+}
+
+/* Esconde a área de impressão por padrão */
+#print-area {
+    display: none; /* Não exibe a área de impressão */
+}
+
+/* Configurações específicas para impressão */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #print-area, #print-area * {
+        visibility: visible;
+    }
+    #print-area {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #fff; /* Fundo branco para destacar na impressão */
+        border: 1px solid #ccc; /* Borda para destacar */
+    }
+    #print-trip-details, #print-passenger-list {
+        margin-top: 10px;
+    }
+    #print-passenger-list {
+        list-style-type: none; /* Remove marcadores de lista */
+        padding-left: 10; /* Remove padding */
+    }
+}
+
+/* Estilos para tornar o design responsivo em telas pequenas */
+@media (max-width: 600px) {
+    body {
+        margin: 10px; /* Margem menor */
+    }
+    
+    h1, h2 {
+        font-size: 1.2em; /* Tamanho de fonte menor para títulos */
+    }
+
+    label {
+        margin-top: 5px; /* Menor espaçamento superior */
+    }
+
+    input, button {
+        width: 100%; /* Campos e botões ocupam toda a largura disponível */
+        margin-top: 3px; /* Menor espaçamento superior */
+    }
+
+    button {
+        margin-bottom: 10px; /* Espaçamento inferior para botões */
+    }
+
+    form {
+        display: flex; /* Flexbox para formulário */
+        flex-direction: column; /* Coloca elementos em coluna */
+    }
+
+    #trip-details, #print-trip-details {
+        font-size: 0.9em; /* Tamanho de fonte menor para detalhes da viagem */
+    }
+}
+
+

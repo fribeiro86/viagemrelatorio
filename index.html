@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Meta tags essenciais para definição de caracteres e responsividade -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Viagem</title>
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Título principal da página -->
+    <h1>Registro de Viagem Gol</h1>
+
+    <!-- Formulário para entrada de dados da viagem -->
+    <form id="trip-form">
+        <!-- Campo para o nome do motorista -->
+        <label for="driver-name">Nome do Motorista:</label>
+        <input type="text" id="driver-name" required><br>
+
+        <!-- Campo para a placa do veículo -->
+        <label for="plate">Placa:</label>
+        <input type="text" id="plate" required><br>
+
+        <!-- Campo para o telefone do motorista -->
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" required><br>
+
+        <!-- Campo para a data de saída -->
+        <label for="departure-date">Data de Saída:</label>
+        <input type="date" id="departure-date" required><br>
+
+        <!-- Campo para o horário de saída -->
+        <label for="departure-time">Horário de Saída:</label>
+        <input type="time" id="departure-time" required><br>
+
+        <!-- Campo para o horário de chegada -->
+        <label for="arrival-time">Horário de Chegada:</label>
+        <input type="time" id="arrival-time" required><br>
+
+        <!-- Campo para o destino da viagem -->
+        <label for="destination">Destino:</label>
+        <input type="text" id="destination" required><br>
+
+        <!-- Campo para a quantidade de passageiros embarcados -->
+        <label for="passenger-count">Passageiros Embarcados (quantidade):</label>
+        <input type="number" id="passenger-count" required><br>
+
+        <!-- Campo para o nome do passageiro -->
+        <label for="passenger-name">Nome do Passageiro:</label>
+        <input type="text" id="passenger-name"><br>
+
+        <!-- Botão para adicionar passageiro à lista -->
+        <button type="button" id="add-passenger">Adicionar Passageiro</button>
+        <!-- Botão para concluir o formulário -->
+        <button type="submit">Concluir</button>
+    </form>
+
+    <!-- Título para a lista de passageiros -->
+    <h2>Passageiros</h2>
+    <!-- Lista não ordenada para exibir os passageiros -->
+    <ul id="passenger-list"></ul>
+
+    <!-- Título para os detalhes da viagem -->
+    <h2>Detalhes da Viagem</h2>
+    <!-- Elemento pre para exibir os detalhes da viagem com formatação -->
+    <pre id="trip-details"></pre>
+
+    <!-- Botão para imprimir a lista de passageiros e detalhes da viagem -->
+    <button id="print-button">Imprimir Passageiros</button>
+
+    <!-- Área para impressão dos detalhes da viagem e passageiros -->
+    <div id="print-area" class="printable">
+        <h2>Detalhes da Viagem</h2>
+        <!-- Div para exibir os detalhes da viagem na área de impressão -->
+        <div id="print-trip-details"></div>
+        <h2>Passageiros</h2>
+        <!-- Lista não ordenada para exibir os passageiros na área de impressão -->
+        <ul id="print-passenger-list"></ul>
+    </div>
+
+    <!-- Inclusão do arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
